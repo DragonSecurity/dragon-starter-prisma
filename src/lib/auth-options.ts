@@ -5,6 +5,7 @@ import { Adapter } from "next-auth/adapters"
 import CredentialsProvider from "next-auth/providers/credentials"
 
 import { prisma } from "@/lib/prisma"
+import { loginSchema } from "@/lib/schemas/auth-schema"
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
@@ -17,6 +18,15 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
+          return null
+        }
+
+        const validation = loginSchema.safeParse({
+          email: credentials.email,
+          password: credentials.password,
+        })
+
+        if (!validation.success) {
           return null
         }
 
@@ -66,7 +76,7 @@ export const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: "/auth/signin",
+    signIn: "/auth/login",
   },
   session: {
     strategy: "jwt",
