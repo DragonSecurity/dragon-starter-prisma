@@ -17,6 +17,7 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader } from "@/compone
 import { NavMain } from "@/components/dashboard/nav-main"
 import { NavUser } from "@/components/dashboard/nav-user"
 import { TeamSwitcher } from "@/components/dashboard/team-switcher"
+import { useTeam } from "@/components/providers/team-provider"
 
 const data = {
   teams: [
@@ -67,7 +68,7 @@ const data = {
 
 export function DashboardSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
   const { data: session } = useSession()
-  const [activeTeam, setActiveTeam] = useState(data.teams[0])
+  const { activeTeam, setActiveTeam } = useTeam()
 
   if (!session) return null
 
