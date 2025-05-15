@@ -2,14 +2,15 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 
 import { getCurrentUser } from "@/lib/auth"
-import { LoginInForm } from "@/app/(main)/(auth)/auth/login/login-form"
+import { RegisterForm } from "@/app/(main)/(auth)/auth/register/register-form"
 
-export default async function LoginPage() {
+export default async function RegisterPage() {
   const currentUser = await getCurrentUser()
 
   if (currentUser) {
     redirect("/dashboard")
   }
+
   return (
     <div className="relative flex min-h-screen items-center justify-center">
       <div className="min-w-[420px] space-y-5">
@@ -21,11 +22,11 @@ export default async function LoginPage() {
             </Link>
           </h1>
           <p className="text-muted-foreground text-sm [text-wrap:balance]">
-            <span className="font-bold">Login</span> to continue using this app
+            <span className="font-bold">Register</span> to continue using this app
           </p>
         </div>
         <div className="p-5 md:p-0">
-          <LoginInForm />
+          <RegisterForm />
         </div>
       </div>
     </div>

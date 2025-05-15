@@ -132,7 +132,7 @@ export const LoginInForm = () => {
           <p className="text-muted-foreground text-sm">
             Don&#39;t have an account?{" "}
             <Link href="/auth/register" className="text-primary font-medium hover:underline">
-              Sign up
+              Register
             </Link>
           </p>
         </CardFooter>
