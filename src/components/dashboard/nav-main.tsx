@@ -32,7 +32,10 @@ export function NavMain({
         <SidebarMenu>
           {items
             .filter((item) => {
-              return !(activeTeam.plan === "Free" && item.title === "Analytics")
+              return !(
+                activeTeam.plan === "Free" &&
+                (item.title === "Analytics" || item.title === "Team")
+              )
             })
             .map((item) => (
               <SidebarMenuItem key={item.title}>

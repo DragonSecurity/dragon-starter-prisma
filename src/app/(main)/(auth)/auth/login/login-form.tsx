@@ -11,9 +11,8 @@ import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 
 import { loginSchema, TLogin } from "@/lib/schemas/auth-schema"
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import {
   Form,
   FormControl,
