@@ -28,7 +28,7 @@ services:
       - postgres
 
   mailpit:
-    image: axllent/mailpit@sha256:c076638db1e15662150be4fb62b8a6e96ef6ba5bde90c838a0239225854830f7
+    image: axllent/mailpit@sha256:ff948a98fd2d16d717f7fd8f2a4ea66a8735d67ad3f7996497670b0fbf1f9797
     restart: always
     ports:
       - "1025:1025"
