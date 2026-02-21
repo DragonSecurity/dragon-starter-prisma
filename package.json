@@ -46,7 +46,7 @@
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@tailwindcss/postcss": "4.2.0",
     "@types/node": "24.10.13",
-    "@types/nodemailer": "6.4.22",
+    "@types/nodemailer": "6.4.23",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.2",
