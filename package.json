@@ -10,7 +10,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@auth/prisma-adapter": "^2.11.1",
+    "@auth/prisma-adapter": "^2.11.2",
     "@hookform/resolvers": "^5.2.2",
     "@prisma/client": "^6.19.3",
     "@radix-ui/react-avatar": "^1.1.11",
@@ -31,7 +31,7 @@
     "date-fns": "^4.1.0",
     "lucide-react": "^0.577.0",
     "next": "16.2.3",
-    "next-auth": "^4.24.13",
+    "next-auth": "^4.24.14",
     "next-themes": "^0.4.6",
     "nodemailer": "^8.0.5",
     "react": "^19.2.5",
@@ -53,7 +53,7 @@
     "eslint-config-next": "15.5.15",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
-    "prettier": "3.8.2",
+    "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.7.2",
     "prisma": "6.19.3",
     "tailwindcss": "4.2.2",
